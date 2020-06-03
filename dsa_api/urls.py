@@ -22,6 +22,6 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 
 urlpatterns = [
-    url("api/", include(router.urls)),
     path('admin/', admin.site.urls),
+    path('', include('activities.urls'))
 ]
