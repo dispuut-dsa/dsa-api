@@ -14,7 +14,8 @@ You can run the server by using `python -m manage runserver`
 Please install the project in a virtual environment. 
 This will help with keeping your system clean as well as making debugging and updating `requirements.txt` easier.
 
-Models should be added to the models package, `ViewSet` objects should be added in the views package.
+You can start creating a new app by running `python3 manage.py startapp <name>`. 
+After that add the name of the app to the `INSTALLED_APPS` list in `dsa_api/settings.py` and add `path('', include('<name>.urls')),` to the urlpatterns list of `dsa_api/urls.py`. Then you can edit the files in the app to your liking. See the `activities` app as an example. 
 
 Further instructions on how to do things are available on 
 [the Django REST documentation site](https://www.django-rest-framework.org/)
