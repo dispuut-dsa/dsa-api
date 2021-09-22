@@ -8,7 +8,7 @@ Below you can find instructions on how to do that. Don't complain about stuff no
 
 Install the requirements using `pip install -r requirements.txt`
 
-Apply migrations with `python manage.py migrate
+Apply migrations with `python manage.py migrate`
 
 You can run the server by using `python3 -m manage runserver` or `python -m manage runserver`
 
