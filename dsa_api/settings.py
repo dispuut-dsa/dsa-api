@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
 
     'activities',
-    'wiki'
+    'wiki',
+    'polls'
 ]
 
 MIDDLEWARE = [

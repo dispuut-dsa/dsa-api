@@ -33,5 +33,6 @@ urlpatterns = [
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('', include('activities.urls')),
     path('', include('wiki.urls')),
-    path('', include(router.urls)),
+    path('', include('polls.urls')),
+    path('', include(router.urls))
 ]
