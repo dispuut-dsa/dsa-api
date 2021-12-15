@@ -3,6 +3,6 @@ from .models import Activity
 from .serializers import ActivitySerializer
 
 
-class ActivityView(viewsets.ReadOnlyModelViewSet):
+class ActivityView(viewsets.ModelViewSet):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer

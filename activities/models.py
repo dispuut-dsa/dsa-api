@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Activity(models.Model):
-    author = models.ForeignKey('auth.User', related_name='activities', on_delete=models.CASCADE)
+    author = models.ForeignKey('auth.User', related_name='activities', on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=200)
     description = models.TextField()
     start_time = models.DateTimeField()
