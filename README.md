@@ -33,3 +33,7 @@ If all went well you should see `(venv)` in front of the text in the terminal.
 `python` should now automatically use the venv Python environment.
 `pip` might not be correctly changed. In that case use `python -m pip` in place of pip. 
 
+## A working flow for upgrading packages to latest
+- Remove all version info (but not the package names) from requirements.txt
+- `python -m pip install --upgrade -r requirements.txt`
+- `pip freeze > requirements.txt`
