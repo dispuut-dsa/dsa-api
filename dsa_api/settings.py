@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 
-    'activities'
+    'activities',
+    'polls'
 ]
 
 MIDDLEWARE = [
