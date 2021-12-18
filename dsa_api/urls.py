@@ -26,5 +26,6 @@ router.register('users', views.UserView)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('activities.urls')),
+    path('', include('wiki.urls')),
     path('', include(router.urls))
 ]
