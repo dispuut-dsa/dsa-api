@@ -14,6 +14,9 @@ class Poll(models.Model):
 
 
 class PollOption(models.Model):
+    """
+        Models an option for a poll
+    """
     id = models.AutoField(primary_key=True)
     poll = models.ForeignKey(Poll, related_name="options", on_delete=models.CASCADE)
     option = models.TextField()
@@ -21,11 +24,12 @@ class PollOption(models.Model):
 
 class PollVote(models.Model):
     """
-        Models a vote by a user on a poll
+        Models a vote by a user on a poll.
+        The poll field is supposed to be set by the backend, not by any API call
     """
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     poll = models.ForeignKey(Poll, related_name="votes", on_delete=models.CASCADE)
-    option = models.ForeignKey(PollOption, on_delete=models.CASCADE)
+    option = models.ForeignKey(PollOption, related_name="votes", on_delete=models.CASCADE)
 
     class Meta:
         constraints = [
