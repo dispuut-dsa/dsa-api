@@ -6,6 +6,8 @@ router = routers.DefaultRouter()
 router.register('polls', views.PollView)
 router.register('pollOption', views.PollOptionView)
 router.register('pollVote', views.PollVoteView)
+router.register('pollVoteCount', views.PollVoteCountView)
+
 
 urlpatterns = [
     path('', include(router.urls))
