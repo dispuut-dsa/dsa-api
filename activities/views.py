@@ -1,4 +1,6 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
+from rest_framework.decorators import api_view
+
 from .models import Activity
 from .serializers import ActivitySerializer
 
@@ -6,12 +8,12 @@ from .serializers import ActivitySerializer
 class ActivityView(viewsets.ReadOnlyModelViewSet):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer
-
-# @authenticate
-# def resolveQueryset(context, request):
-#     if context.is_admin:
-#         return queryset
-#
+    permission_classes = [permissions.IsAuthenticated]
+#     @api_view(['GET'])
+#     def resolveQueryset(self, context, request):
+#         if request.user:
+#             return self.queryset
+# #
 #
 # authenticate(fun, args):
 #     if args[context].token is valid:
