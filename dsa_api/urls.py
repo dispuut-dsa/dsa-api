@@ -32,5 +32,6 @@ urlpatterns = [
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'), # todo: write authentication decorator that checks for tokens when authentication is required
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('', include('activities.urls')),
+    path('', include('wiki.urls')),
     path('', include(router.urls)),
 ]
