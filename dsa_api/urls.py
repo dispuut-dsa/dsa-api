@@ -29,7 +29,7 @@ router.register('users', views.UserView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'), # todo: write authentication decorator that checks for tokens when authentication is required
+    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('', include('activities.urls')),
     path('', include('wiki.urls')),
