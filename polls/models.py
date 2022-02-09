@@ -12,6 +12,11 @@ class Poll(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
 
+    def __repr__(self):
+        return f"PollOption(id={self.id}, author={str(self.author)}, name={self.name})"
+
+    def __str__(self):
+        return self.__repr__()
 
 class PollOption(models.Model):
     """
@@ -20,6 +25,12 @@ class PollOption(models.Model):
     id = models.AutoField(primary_key=True)
     poll = models.ForeignKey(Poll, related_name="options", on_delete=models.CASCADE)
     option = models.TextField()
+
+    def __repr__(self):
+        return f"PollOption(id={self.id}, poll={str(self.poll)}, option={self.option})"
+
+    def __str__(self):
+        return self.__repr__()
 
 
 class PollVote(models.Model):
