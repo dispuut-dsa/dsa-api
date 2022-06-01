@@ -11,7 +11,7 @@ class IngredientSerializer(serializers.ModelSerializer):
 class RecipeStepSerializer(serializers.ModelSerializer):
     class Meta:
         model = RecipeStep
-        fields = ('contents')
+        fields = ['contents']
 
 
 class RecipeSerializer(serializers.ModelSerializer):

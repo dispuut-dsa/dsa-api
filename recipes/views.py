@@ -1,8 +1,8 @@
 from rest_framework import viewsets
-from .models import Activity
-from .serializers import ActivitySerializer
+from .models import Recipe, RecipeStep, Ingredient
+from .serializers import RecipeSerializer, RecipeStepSerializer, IngredientSerializer
 
 
-class ActivityView(viewsets.ReadOnlyModelViewSet):
-    queryset = Activity.objects.all()
-    serializer_class = ActivitySerializer
+class RecipeView(viewsets.ReadOnlyModelViewSet):
+    queryset = Recipe.objects.all()
+    serializer_class = RecipeSerializer
