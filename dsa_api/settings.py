@@ -137,3 +137,5 @@ REST_FRAMEWORK = {
 # if necessary, below variable can be used for JWT settings, see https://django-rest-framework-simplejwt.readthedocs.io/en/latest/settings.html
 SIMPLE_JWT = {
 }
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
